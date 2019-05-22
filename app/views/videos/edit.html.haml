@@ -1,0 +1,11 @@
+.wrapper
+  .form_wrapper
+    = form_for(@video) do |f|{class:"main_form"}
+      .top_form
+        =f.label :name, "タイトル"
+        =f.text_field :title,class:"text_field",vlue:"#{@video[:title]}"
+      .bottom_fom
+        =f.file_field :image,class:"text_area",vlue:"#{@video[:image]}"
+      .bottom_fom
+        =f.file_field :video,class:"text_area",placeholder:"動画",file:"#{@video[:video]}"
+      =f.submit "Send",class:"bottun"

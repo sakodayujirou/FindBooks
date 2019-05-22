@@ -1,0 +1,7 @@
+.index__wrapper
+  -@videos.each do |video|
+    .content
+      .content__image
+        = link_to image_tag video.image.url,href:"/videos/#{video.id}" if video.image.present?
+      .conent__title
+        = link_to "#{video.title}","/videos/#{video.id}"

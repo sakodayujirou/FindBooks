@@ -6,4 +6,19 @@
   height: 100px;
   width: 100%;
   background-color: yellow;
+  &__left{
+    float: left;
+    padding: 30px 0 0 50px;
+    font-size: 30px;
+  }
+  &__right{
+    float: right;
+    padding: 40px 50px 0 0;
+    font-size: 20px;
+    li{
+      float: right;
+      padding-right: 15px;
+    }
+  }
 }
+
