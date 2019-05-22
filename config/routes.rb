@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "videos#index"
-  resources :videos, only: [:index]
+  resources :videos  do
+  end
+  resources :users, only: [:index]
 end

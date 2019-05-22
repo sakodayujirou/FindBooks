@@ -1,0 +1,10 @@
+.wrapper
+  = @user.name
+  .videos
+    -@videos.each do |video|
+      .video__content
+        = video_tag video.video,loop: true, controls: true if video.video.present?
+      .video__title
+        = link_to "削除","/videos/#{video.id}",method: :delete
+      .video__title
+        = link_to "編集", "/videos/#{video.id}/edit"
