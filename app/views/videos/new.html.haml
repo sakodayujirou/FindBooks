@@ -4,6 +4,9 @@
       .top_form
         =f.label :name, "タイトル"
         =f.text_field :title,class:"text_field"
+        .new__search__form
+        %input.new__search__input{ type: "text",class: "search__query", name:"video[book_ids][]"}        
+        =f.submit 'Search', name: :nil,class:"saerch__bottun"
       .bottom_fom
         =f.file_field :image,class:"text_area",placeholder:"画像"
       .bottom_fom
