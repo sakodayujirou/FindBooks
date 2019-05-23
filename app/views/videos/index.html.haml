@@ -2,6 +2,54 @@
   -@videos.each do |video|
     .content
       .content__image
-        = link_to image_tag video.image.url,href:"/videos/#{video.id}" if video.image.present?
+        = link_to  image_tag video.image.url,class: "index__image" if video.image.present?
       .conent__title
-        = link_to "#{video.title}","/videos/#{video.id}"
+        = link_to "#{video.title}".truncate(27,omission:"..."),"/videos/#{video.id}",class: "index__text"
+        = link_to "#{video.user.name}","/videos/#{video.id}",class: "index__user"
+  
+  .search__bottom_wrapper
+    .check_box_title
+      ジャンルで探す
+    .search_bottom_1
+      = form_tag(videos_path,method: :get) do
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"小説"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"漫画"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"雑誌"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"ライトノベル"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"ライトノベル"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"小説"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"漫画"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"雑誌"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"ライトノベル"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"ライトノベル"
+    .search_bottom_2
+      = form_tag(videos_path,method: :get) do
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"小説"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"漫画"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"雑誌"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"ライトノベル"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"ライトノベル"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"小説"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"漫画"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"雑誌"
+        =check_box_tag :nil,:nil,nil,class:"check_box" 
+        =label_tag :nill,"ライトノベル"
+        =submit_tag 'Search', name: :nil,class:"saerch__bottun"
