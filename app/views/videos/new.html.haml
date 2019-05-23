@@ -4,8 +4,14 @@
       .top_form
         =f.label :name, "タイトル"
         =f.text_field :title,class:"text_field"
-      .bottom_fom
+      .book__form
+        =f.label :name, "検索"
+        -# %input{ placeholder: "紹介したい本を入力してください", type:"text",name: "keyword",class:"book_text_field"}
+        -# #book-search-result
+        -# =f.label :name,"投稿する本"
+        -# .selected-book
+      .bottom_form
         =f.file_field :image,class:"text_area",placeholder:"画像"
-      .bottom_fom
+      .bottom_form
         =f.file_field :video,class:"text_area",placeholder:"動画"
       =f.submit "Send",class:"bottun"

@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_20_064706) do
+ActiveRecord::Schema.define(version: 2019_05_23_080358) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "genre"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -32,6 +33,15 @@ ActiveRecord::Schema.define(version: 2019_05_20_064706) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "video_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "video_id"
+    t.bigint "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_video_books_on_book_id"
+    t.index ["video_id"], name: "index_video_books_on_video_id"
+  end
+
   create_table "videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "video"
@@ -39,6 +49,9 @@ ActiveRecord::Schema.define(version: 2019_05_20_064706) do
     t.integer "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "book_id"
   end
 
+  add_foreign_key "video_books", "books"
+  add_foreign_key "video_books", "videos"
 end

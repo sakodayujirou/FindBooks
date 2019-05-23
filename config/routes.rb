@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :videos  do
   end
   resources :users, only: [:index]
+  resources :books, only: [:index]
 end
