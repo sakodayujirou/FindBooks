@@ -5,10 +5,11 @@ class VideosController < ApplicationController
   end
   def new
     @video=Video.new
+    @books=Book.limit(4)
   end
   def create
-   @video=Video.new(title:video_params[:title],image:video_params[:image],video:video_params[:video],user_id:current_user.id)
-  @video.save
+    @video=Video.new(title:video_params[:title],image:video_params[:image],video:video_params[:video],book_id:video_params[:book_id],user_id:current_user.id)
+    @video.save
     redirect_to root_path
   end
 
@@ -22,14 +23,14 @@ class VideosController < ApplicationController
   end
 
   def show
-    @videos=Video.order(created_at: :DESC).limit(3)
+    @videos=Video.order(created_at: :DESC).limit(4)
     @video=Video.find(params[:id])
   end
 
   private
 
    def video_params
-     params.require(:video).permit(:title,:image,:video)
+     params.require(:video).permit(:title,:image,:video,:book_id)
    end
 
 end

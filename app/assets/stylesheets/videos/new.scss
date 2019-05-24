@@ -1,0 +1,125 @@
+.form_wrapper{
+  margin: 150px 0 0 400px; 
+}
+
+.top_form{
+  margin-bottom: 50px;
+}
+
+.top_title{
+  margin-left: 70px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px 5px 15px 5px;
+  background-color: $deep_blue;
+  color: white;
+}
+
+.text_field{
+  width: 300px;
+  border-radius: 5px ;
+}
+
+.book__form{
+  margin-bottom: 50px;
+}
+
+.book_search{
+  margin-left: 100px;
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px 5px 15px 5px;
+  background-color: $deep_blue;
+  color: white;
+}
+.book_text_field{
+  width: 300px;
+  border-radius: 5px ;
+}
+
+.books_list{
+  height: 300px;
+  width: 300px;
+}
+.selected_book_label{
+  position: relative;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px 5px 15px 5px;
+  background-color: $deep_blue;
+  color: white;
+}
+
+.book_list_form{
+  width: 345px;
+  height: 35px;
+  margin: 20px 0 0 170px;
+  border-bottom: solid $deep_blue;
+  
+}
+
+.book_list_form__name{
+  float: left;
+  margin-top:10px;
+}
+.book_list_add{
+  font-size: 13px;
+  border-radius: 5px 5px 15px 5px;
+  color: white;
+  padding: 7px 15px 7px 15px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 300px;
+  background-color: $deep_blue;
+}
+
+
+.selected_book_label{
+  margin-left: 65px;
+}
+
+.form__select__book__title{
+  margin-top: 15px;
+  float: left;
+  height: 30px;
+  width: 290px;
+  margin: 0 0 0 200px;
+  border-bottom: solid $deep_blue;
+
+}
+.book-search-remove{
+  font-size: 13px;
+  border-radius: 5px 5px 15px 5px;
+  color: white;
+  padding: 7px 15px 7px 15px;
+  position: absolute;
+  margin-left: 450px;
+  background-color: $deep_blue;
+}
+.video_image_label{
+  margin-left: 5px;
+  margin-bottom: 50px;
+  font-size: 13px;
+  border-radius: 5px 5px 15px 5px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  background-color: $deep_blue;
+}
+.bottom_form{
+  margin-bottom: 50px;
+
+}
+
+.video_label{
+  margin-left: 30px;
+  font-size: 13px;
+  border-radius: 5px 5px 15px 5px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  background-color: $deep_blue;
+}
+.video_bottun{
+  margin: 20px 0 0 280px; 
+  padding: 10px 20px 10px 20px;
+  background-color: $deep_blue;
+  color: white;
+  border-radius: 5px 5px 15px 5px;
+}

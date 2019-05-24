@@ -1,13 +1,17 @@
 .show__wrapper
   = video_tag @video.video,loop: true, controls: true ,class: "show__video" if @video.video.present?
   .show__video__title
+    %p.video__title タイトル
     =@video.title
     .show__video__id
       1500回視聴
     .show__video__user
-      投稿者(ユーザーの画像に変更):
+      %p.video__user 投稿者
       =@video.user.name
     .show__video__book
+      %p.video__book 紹介する本
+      =@video.book.title 
+    .show_shop_link
       =link_to "購入画面へ進む",root_path,class:"shop__link"
   -@videos.each do |video|
     .show__contents
