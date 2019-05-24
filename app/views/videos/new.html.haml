@@ -1,17 +1,23 @@
-.wrapper
-  .form_wrapper
-    = form_for(@video) do |f|{class:"main_form"}
-      .top_form
-        =f.label :name, "タイトル"
-        =f.text_field :title,class:"text_field"
-      .book__form
-        =f.label :name, "検索"
-        -# %input{ placeholder: "紹介したい本を入力してください", type:"text",name: "keyword",class:"book_text_field"}
-        -# #book-search-result
-        -# =f.label :name,"投稿する本"
-        -# .selected-book
-      .bottom_form
-        =f.file_field :image,class:"text_area",placeholder:"画像"
-      .bottom_form
-        =f.file_field :video,class:"text_area",placeholder:"動画"
-      =f.submit "Send",class:"bottun"
+.form_wrapper
+  = form_for(@video) do |f|{class:"main_form"}
+    .top_form
+      =f.label :name, "タイトル",class:"top_title"
+      =f.text_field :title,class:"text_field"
+    .book__form
+      =f.label :name, "検索",class:"book_search"
+      %input{ placeholder: "紹介したい本を入力してください", type:"text",name: "keyword",class:"book_text_field"}
+      #book-search-result.books_list
+        -@books.each do |book|
+          #chat-user-8.book_list_form
+            %p.book_list_form__name 
+              ="#{book.title}"
+            .book_list_add{"data-book-id" => "#{book.id}", "data-book-title" => "#{book.title}"} 追加
+      =f.label :name,"投稿する本",class:"selected_book_label"
+      .selected-book
+    .bottom_form
+      =f.label :name,"動画のサムネイルを選択",class:"video_image_label"
+      =f.file_field :image,class:"video_image_area",placeholder:"画像"
+    .bottom_form
+      =f.label :name,"投稿する動画を選択",class:"video_label"
+      =f.file_field :video,class:"video_area",placeholder:"動画"
+    =f.submit "投稿する",class:"video_bottun"

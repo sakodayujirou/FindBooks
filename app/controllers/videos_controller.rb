@@ -5,6 +5,7 @@ class VideosController < ApplicationController
   end
   def new
     @video=Video.new
+    @books=Book.limit(4)
   end
   def create
     @video=Video.new(title:video_params[:title],image:video_params[:image],video:video_params[:video],book_id:video_params[:book_id],user_id:current_user.id)
@@ -22,7 +23,7 @@ class VideosController < ApplicationController
   end
 
   def show
-    @videos=Video.order(created_at: :DESC).limit(3)
+    @videos=Video.order(created_at: :DESC).limit(4)
     @video=Video.find(params[:id])
   end
 
