@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "videos#index"
   resources :videos  do
   end
-  resources :users, only: [:index]
-  resources :books, only: [:index]
+  resources :users, only: [:index,:show]
+  resources :books, only: [:index,:show]
+  post "books/:id/pay" => 'books#pay'
 end

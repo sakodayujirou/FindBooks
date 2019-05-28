@@ -25,7 +25,9 @@
 }
 
 
-
+.header__right{
+  float:right;
+}
 
 .list{
     font-size: 15px;
@@ -47,13 +49,13 @@
 
 
 .header{
-  margin-bottom: 40px;
   border-radius:5px 5px 15px 15px;
-  background-color: $right_blue;
+  background-color: $light_blue;
   opacity: 0.8;
   height: 70px;
   width: 100%;
-  box-shadow: 10px 10px 10px rgba(163, 159, 159, 0.6);  &__left{
+  box-shadow: 10px 10px 10px rgba(163, 159, 159, 0.6);
+  &__left{
   float: left;
   font-size: 30px;
   }
@@ -70,4 +72,6 @@
     margin: 10px 0 0 50px;
   }
 }
+
+
 

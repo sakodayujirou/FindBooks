@@ -1,5 +1,7 @@
 
-
+.index__wrapper{
+  margin-top: 40px;
+}
 
 .content{
   float: left;
@@ -49,7 +51,7 @@
   float: left;
   height: 180px;
   width: 1100px;
-  background-color: $right_blue;
+  background-color: $light_blue;
   opacity: 0.8;
   border-radius:30px;
 }

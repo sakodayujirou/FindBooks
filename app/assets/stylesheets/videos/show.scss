@@ -20,7 +20,7 @@
 }
 
 .show__video__id{
-  margin: 30px 0 0 800px;
+  margin: 0px 0 0 800px;
   font-size: 20px;
   color:rgb(139, 139, 139);
   opacity:0.8;
@@ -29,7 +29,7 @@
 .show__video__user{
   
   padding: 20px 0 0 20px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .show__conents__title{
   height: 50px;
@@ -60,9 +60,9 @@
 
 .video__title{
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   border-radius:5px 5px 15px 5px;
-  padding: 12px;
+  padding: 10px;
   background-color: $deep_blue;
   float: left;
   margin-right: 10px;
@@ -70,9 +70,9 @@
 
 .video__book{
   margin-right: 10px;
-  padding: 12px;
+  padding: 10px;
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   border-radius:5px 5px 15px 5px;
   background-color: $deep_blue;
   float: left;
@@ -80,11 +80,15 @@
 
 .video__user{
   margin-right: 10px;
-  padding: 12px;
+  padding: 10px;
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   border-radius:5px 5px 15px 5px;
   color:white;
   background-color: $deep_blue;
   float: left;
+}
+
+.video__book__price{
+  margin: 40px 0 0 37px;
 }

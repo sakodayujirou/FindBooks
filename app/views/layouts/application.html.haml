@@ -19,15 +19,13 @@
             = form_tag(videos_path,method: :get) do
               =text_field_tag :search, nil,class:"saerch__field",placeholder:"タイトルで探す"
               =submit_tag 'Search', name: :nil,class:"saerch__bottun"
-          .header__right
-            %ul
-              %li
-                =link_to "マイページ", "/users",class:"list"
-              %li
-                =link_to "新規投稿","videos/new",class: "list"
-              %li
-                =link_to "ログアウト","users/sign_out", class:"list",method: :delete
-            
+          .header__right       
+            =link_to "新規投稿","/videos/new",class: "list"           
+            =link_to "ログアウト","/users/sign_out", class:"list",method: :delete
+            =link_to "購入履歴", "/users",class:"list"
+            =link_to "マイページ", "/users/#{current_user.id}",class:"list"
+
+
       -else
         .header
           .header__left
