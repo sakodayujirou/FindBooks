@@ -27,6 +27,7 @@ class VideosController < ApplicationController
     @video=Video.find(params[:id])
   end
 
+  
   private
 
    def video_params

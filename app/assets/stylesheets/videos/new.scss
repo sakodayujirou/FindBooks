@@ -1,5 +1,16 @@
 .form_wrapper{
-  margin: 150px 0 0 400px; 
+  padding-top: 70px;
+  padding-bottom: 70px;
+  width: 100%;
+  background-color: $very_light_blue;
+  
+}
+.form_paper{
+  border-radius: 5px;
+  margin: 50px 400px 50px 400px;
+  padding: 70px 0 70px 30px;
+  background-color:white;
+  box-shadow: 10px 10px 10px rgba(163, 159, 159, 0.6);
 }
 
 .top_form{
@@ -117,7 +128,7 @@
   background-color: $deep_blue;
 }
 .video_bottun{
-  margin: 20px 0 0 280px; 
+  margin: 20px 0 0 240px; 
   padding: 10px 20px 10px 20px;
   background-color: $deep_blue;
   color: white;

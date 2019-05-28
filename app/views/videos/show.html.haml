@@ -10,9 +10,14 @@
       =@video.user.name
     .show__video__book
       %p.video__book 紹介する本
-      =@video.book.title 
+      =@video.book.title
+    .video__book__price
+      %p.video__book 価格
+      =@video.book.price
+      円
     .show_shop_link
-      =link_to "購入画面へ進む",root_path,class:"shop__link"
+      =link_to "購入画面へ進む","/books/#{@video.book_id}",class:"shop__link"
+
   -@videos.each do |video|
     .show__contents
       .show__contents__image

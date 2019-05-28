@@ -22,6 +22,7 @@ $(function() {
 
  
   $(".book_text_field").on("keyup", function() {
+    console.log("ddddd")
     var input = $(".book_text_field").val();
     $(".form__select__book").remove()
     $.ajax({
