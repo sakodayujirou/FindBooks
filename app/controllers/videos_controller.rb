@@ -27,6 +27,13 @@ class VideosController < ApplicationController
     @video=Video.find(params[:id])
   end
 
+  def search
+    @videos = Video.where( "title LIKE ? ","%#{params[:keyword]}%")
+  end
+
+  def genre
+  end
+
   
   private
 

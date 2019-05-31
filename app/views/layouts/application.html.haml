@@ -16,8 +16,8 @@
           .header__left
             =link_to "FindBook",root_path,class: "index__title"
           .search__top
-            = form_tag(videos_path,method: :get) do
-              =text_field_tag :search, nil,class:"saerch__field",placeholder:"タイトルで探す"
+            = form_tag(search_videos_path,method: :get) do
+              =text_field_tag :keyword, nil,class:"saerch__field",placeholder:"タイトルで探す"
               =submit_tag 'Search', name: :nil,class:"saerch__bottun"
           .header__right       
             =link_to "新規投稿","/videos/new",class: "list"           
