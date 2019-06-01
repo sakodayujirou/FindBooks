@@ -14,7 +14,7 @@
         .header
           
           .header__left
-            =link_to "FindBook",root_path,class: "index__title"
+            =link_to "FindBooks",root_path,class: "index__title"
           .search__top
             = form_tag(search_videos_path,method: :get) do
               =text_field_tag :keyword, nil,class:"saerch__field",placeholder:"タイトルで探す"
@@ -22,8 +22,10 @@
           .header__right       
             =link_to "新規投稿","/videos/new",class: "list"           
             =link_to "ログアウト","/users/sign_out", class:"list",method: :delete
-            =link_to "購入履歴", "/users",class:"list"
-            =link_to "マイページ", "/users/#{current_user.id}",class:"list"
+            =link_to "動画編集", "/users",class:"list"
+            =link_to "購入履歴", "/users/#{current_user.id}/history",class:"list"
+            =link_to "利益表", "/users/#{current_user.id}/profit",class:"list"
+
 
 
       -else
