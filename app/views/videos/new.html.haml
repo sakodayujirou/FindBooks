@@ -9,12 +9,16 @@
         %input{ placeholder: "紹介したい本を入力してください", type:"text",name: "keyword",class:"book_text_field"}
         #book-search-result.books_list
           -@books.each do |book|
-            #chat-user-8.book_list_form
+            .book_list_form
               %p.book_list_form__name 
                 ="#{book.title}"
               .book_list_add{"data-book-id" => "#{book.id}", "data-book-title" => "#{book.title}"} 追加
         =f.label :name,"投稿する本",class:"selected_book_label"
         .selected-book
+        
+      .bottom_form_search
+        =f.label :name,"説明",class:"video_info_label"
+        =f.text_area :information,class:"video_info_area",placeholder:"説明"
       .bottom_form
         =f.label :name,"動画のサムネイルを選択",class:"video_image_label"
         =f.file_field :image,class:"video_image_area",placeholder:"画像"

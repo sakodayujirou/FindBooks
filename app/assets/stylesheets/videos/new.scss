@@ -88,7 +88,6 @@
 }
 
 .form__select__book__title{
-  margin-top: 15px;
   float: left;
   height: 30px;
   width: 290px;
@@ -133,4 +132,24 @@
   background-color: $deep_blue;
   color: white;
   border-radius: 5px 5px 15px 5px;
+}
+
+.video_info_label{
+  position: absolute;
+  margin-left: 120px;
+  font-size: 13px;
+  border-radius: 5px 5px 15px 5px;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  background-color: $deep_blue;
+
+}
+.video_info_area{
+  margin-left: 200px;
+  height: 150px;
+  width: 330px;
+  margin-bottom: 15px;
+  border-radius: 5px ;
+  border: inset 2px rgb(218, 214, 214);
+
 }

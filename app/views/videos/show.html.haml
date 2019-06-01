@@ -16,7 +16,7 @@
       =@video.book.price
       円
     .show_shop_link
-      =link_to "購入画面へ進む","/books/#{@video.book_id}",class:"shop__link"
+      =link_to "購入画面へ進む","/videos/#{@video.id}/books/#{@video.book_id}",class:"shop__link"
 
   -@videos.each do |video|
     .show__contents

@@ -1,12 +1,15 @@
-.wrapper
-  = @user.name
-.history
-  -@histories.each_with_index do |history, id|
-    .histories
-      = id+1
-      = history.book.title
-      = history.price
-      円
-      = history.created_at.strftime("%Y/%m/%d %H:%M")
-  
-    
+-@videos.each do |video|
+  .search_content
+    .search_content__image
+      = image_tag video.image.url,class: "search__index__image" if video.image.present?
+    .search_conent__title
+      .title__text
+        =video.title.truncate(40,omission:"...")
+    .search_conent__user
+      .user__text
+        =video.user.name
+    .search_conent__info
+      .info__text
+        =video.information 
+    .video__delete
+      = link_to "削除","/videos/#{video.id}",method: :delete,class: "delete__bottun"
