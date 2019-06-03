@@ -20,7 +20,7 @@
               =text_field_tag :keyword, nil,class:"saerch__field",placeholder:"タイトルで探す"
               =submit_tag 'Search', name: :nil,class:"saerch__bottun"
           .header__right       
-            =link_to "新規投稿","/videos/new",class: "list"           
+            =link_to "新規投稿","/videos/new",class: "list"
             =link_to "ログアウト","/users/sign_out", class:"list",method: :delete
             =link_to "動画編集", "/users",class:"list"
             =link_to "購入履歴", "/users/#{current_user.id}/history",class:"list"
@@ -31,11 +31,11 @@
       -else
         .header
           .header__left
-            =link_to "FindBook",root_path
+            =link_to "FindBook",root_path,class: "index__title"
           .header__right
             %ul
               %li
-                =link_to "ログイン", new_user_session_path
+                =link_to "ログイン", new_user_session_path,class:"list"
               %li 
-                =link_to "新規登録", new_user_registration_path
+                =link_to "新規登録", new_user_registration_path,class:"list"
       = yield

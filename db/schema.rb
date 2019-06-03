@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_01_124806) do
+ActiveRecord::Schema.define(version: 2019_06_02_084831) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -20,7 +20,14 @@ ActiveRecord::Schema.define(version: 2019_06_01_124806) do
     t.string "genre"
     t.integer "price"
     t.string "initial"
-    t.string "second_initial"
+    t.string "link"
+    t.float "profit"
+  end
+
+  create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
