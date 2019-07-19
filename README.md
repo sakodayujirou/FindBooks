@@ -10,21 +10,8 @@
 
 
 ## Demo
+![](https://i.gyazo.com/9715954fae45dda63f8090394ddbc540.jpg)
 
-## VS. 
 
-## Requirement
 
-## Usage
 
-## Install
-
-## Contribution
-
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
-
-## Author
-
-[tcnksm](https://github.com/tcnksm)
