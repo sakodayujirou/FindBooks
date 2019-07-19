@@ -16,6 +16,8 @@
 ![](https://i.gyazo.com/609ac94f06ea968ce99dbc05bf54f1ea.png)
 ![](https://i.gyazo.com/121a3b994b003a29c071e3383d7ea8a3.png)
 
-
+## Other
+サイトについて動画で紹介しています。
+<https://www.youtube.com/watch?v=RT_jOL9Ha3U&t=273s>
 
 
