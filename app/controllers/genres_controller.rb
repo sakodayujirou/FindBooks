@@ -2,6 +2,10 @@ class GenresController < ApplicationController
   def index
     @genres=Genre.all
   end
+  def new
+    @video=Video.new
+    @books=Book.limit(4)
+  end
   def show
     @genre=Genre.find(params[:id])
     books=Book.where("genre = ?","#{@genre.name}")

@@ -18,4 +18,6 @@ class UsersController < ApplicationController
       @total__price = @total__price + profit.price 
     end
   end
+  def test
+  end
 end

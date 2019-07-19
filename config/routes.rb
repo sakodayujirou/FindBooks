@@ -9,11 +9,13 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:index,:show]
-  resources :genres, only: [:index,:show]
+  resources :genres, only: [:index,:show,:new]
 
   get "/books" => "books#index"
   post "books/:id/pay" => 'books#pay'
   get "users/:id/history" => "users#history"
   get "users/:id/profit" => "users#profit"
-  
+  get "users/:id/test" => "users#test"
+  get "/test" => "videos#test"
+  get "/test2" => "book#test"
 end
