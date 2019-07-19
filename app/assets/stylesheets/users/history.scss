@@ -16,8 +16,8 @@
   margin-top: 20px;
 }
 .history__title{
+  display: inline-block;
   margin: 10px 0 0 10px;
-  width: 70px;
   padding: 10px 20px 10px 20px;
   border-radius: 5px 5px 15px 5px;
   background-color: $deep_blue;
@@ -65,8 +65,21 @@
 
 }
 
-.delete__bottun{
-  margin-left: 400px;
-  text-decoration: none;
-  color: red;
+.genre_left{
+  width: 530px;
+  margin-top: 30px;
+  margin-left: 90px;
+  display: table;
+  border-radius: 5px 5px 15px 5px;
+}
+.genre_right_1{
+  padding-left: 330px;
+  display: table-cell;
+  margin-top: 50px;
+  border-radius: 5px 5px 15px 5px;
+}
+.genre_right_2{
+  margin-right: 50px;
+  display: table-cell;
+  border-radius: 5px 5px 15px 5px;
 }

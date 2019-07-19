@@ -1,24 +1,25 @@
-# README
+# Findbooks
+***
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+## Demo
 
-* System dependencies
+## VS. 
 
-* Configuration
+## Requirement
 
-* Database creation
+## Usage
 
-* Database initialization
+## Install
 
-* How to run the test suite
+## Contribution
 
-* Services (job queues, cache servers, search engines, etc.)
+## Licence
 
-* Deployment instructions
+[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
 
-* ...
+## Author
+
+[tcnksm](https://github.com/tcnksm)

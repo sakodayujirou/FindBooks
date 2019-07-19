@@ -57,4 +57,9 @@ $(function() {
     $(document).on("click",".book-search-remove", function() {
       $(".form__select__book").remove()
     });
+    $(document).on("click",".check_box_title", function(){
+      console.log("ok")
+    });
 });
+
+

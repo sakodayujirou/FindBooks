@@ -1,0 +1,21 @@
+.history__wrapper
+  .history
+    .history__title
+      =@genre.name
+      一覧
+    .genre_left
+      タイトル
+      .genre_right_1
+        価格
+      .genre_right_2
+        利益率
+    -@books.each do |book|
+      -book.each do |book|
+        .histories
+          = book.title.truncate(14,omission:"...")
+          .created_at
+            = book.profit
+          .price
+            = book.price
+            円
+  
