@@ -1,8 +1,10 @@
 # Findbooks
 ***
-
+====
+本を紹介する動画投稿サイト
 
 ## Description
+
 
 ## Demo
 
