@@ -34,9 +34,11 @@
       .card__wrapper
         .card__title クレジットカード:
         = form_tag(action: :pay, method: :post) do
+          %script.payjp-button{"data-key" => ENV["PUBLIC_TEST_KEY"], :src => "https://checkout.pay.jp", :type => "text/javascript"}
           %input{ value:"#{@video_id}", type:"hidden",name: "keyword"}
-          %script.payjp-button{"data-key" => "pk_test_8960e38ee745f246406af653", :src => "https://checkout.pay.jp", :type => "text/javascript"}
-        .amazon
-          =link_to "amazonでの購入","#{@book.link}",class:"amazon_link"
+    .amazon
+      =link_to "amazonでの購入","#{@book.link}",class:"amazon_link"
+
+
 
 

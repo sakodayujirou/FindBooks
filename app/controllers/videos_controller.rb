@@ -35,7 +35,13 @@ class VideosController < ApplicationController
   end
 
   def genre
-    @books=Book.where("genre = ?","#{params[:keyword]}")
+    # @test=params.require(:genre)[:keywords]
+    @tests=params.require(:genre)[:keywords]
+    @books2= []
+    @tests.each do |test|
+      @books=Book.where("genre = ?",test)
+      @books2 << @books
+    end
   end
 
   def test
@@ -48,5 +54,6 @@ class VideosController < ApplicationController
    def video_params
      params.require(:video).permit(:title,:image,:video,:information,:book_id)
    end
+
 
 end

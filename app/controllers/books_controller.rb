@@ -26,7 +26,7 @@ class BooksController < ApplicationController
     video=Video.find(params[:keyword])
     user_id=video.user_id
     Profit.create(book_id:book.id,user_id:user_id,price:profit)
-    Payjp.api_key = 'sk_test_35a231252b9fff212e0a38c2'
+    Payjp.api_key = ENV["SECRET_TEST_KEY"]
     charge = Payjp::Charge.create(
     :amount => book.price,
     :card => params['payjp-token'],

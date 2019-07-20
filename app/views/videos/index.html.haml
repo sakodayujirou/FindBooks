@@ -12,32 +12,6 @@
       ジャンルで探す
     .search_bottom_1
       = form_tag("/videos/genre",method: :get) do
-        =check_box_tag :keyword,"小説",false,class:"check_box" 
-        =label_tag :nill,"小説"
-        =check_box_tag :keyword,"雑誌",false,class:"check_box" 
-        =label_tag :nill,"雑誌"
-        =check_box_tag :keyword,"マンガ",false,class:"check_box" 
-        =label_tag :nill,"マンガ"
-        =check_box_tag :keyword,"ライトノベル",false,class:"check_box" 
-        =label_tag :nill,"ライトノベル"
-        =check_box_tag :keyword,"絵本",false,class:"check_box" 
-        =label_tag :nill,"絵本"
-        =check_box_tag :keyword,"図鑑",false,class:"check_box" 
-        =label_tag :nill,"図鑑"
-        =check_box_tag :keyword,"政治",false,class:"check_box" 
-        =label_tag :nill,"政治"
-        .search_bottom_2
-        =check_box_tag :keyword,"歴史",false,class:"check_box" 
-        =label_tag :nill,"歴史"
-        =check_box_tag :keyword,"スポーツ",false,class:"check_box" 
-        =label_tag :nill,"スポーツ"
-        =check_box_tag :keyword,"生活",false,class:"check_box" 
-        =label_tag :nill,"生活"
-        =check_box_tag :keyword,"サイエンス",false,class:"check_box" 
-        =label_tag :nill,"サイエンス"
-        =check_box_tag :keyword,"ビジネス",false,class:"check_box" 
-        =label_tag :nill,"ビジネス"
-        =check_box_tag :keyword,"アート",false,class:"check_box" 
-        =label_tag :nill,"アート"
+        =collection_check_boxes :genre,:keywords,Genre.all,:name,:name
         =submit_tag 'Search',class:"saerch__bottun"
   =link_to "本の一覧", "/genres",class:"book__list__link"
