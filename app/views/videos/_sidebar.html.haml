@@ -1,0 +1,22 @@
+-if user_signed_in?
+  .left
+    =link_to "/" do
+      %i.fas.fa-home
+    =link_to "/videos/new" do
+      %i.fas.fa-edit
+    =link_to "/users" do
+      %i.fas.fa-video
+    =link_to "/users/#{current_user.id}/history" do
+      %i.fas.fa-coins
+    =link_to "/users/#{current_user.id}/profit" do
+      %i.fas.fa-piggy-bank
+    =link_to "/users/sign_out",method: :delete do
+      %i.fas.fa-sign-out-alt
+-else
+  .left
+    =link_to "/" do
+      %i.fas.fa-home
+    =link_to new_user_session_path do
+      %i.fas.fa-sign-in-alt
+    =link_to new_user_registration_path do
+      %i.fas.fa-user-plus
