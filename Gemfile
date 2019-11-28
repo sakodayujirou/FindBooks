@@ -71,3 +71,5 @@ gem 'mini_magick'
 gem 'jquery-rails'
 gem 'payjp'
 gem "font-awesome-rails"
+
+gem 'rails_12factor', group: :production
